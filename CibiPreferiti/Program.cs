@@ -1,55 +1,92 @@
-﻿// Cibi preferiti
+﻿
 
-Console.WriteLine("-----ESERCIZIO CIBO PTEFERITI-----");
 
-//DICHIARO ARRAY
-
-string[] cibiPreferiti = {"Pizza", "Pasta", "Hamburger",
-    "Gelato", "Snack", "Panini", "Biscotti", "Pop-corn", "Patatine"};
-
-// DICHIARO LUNGHEZZA CLASSIFICA
-
-Console.WriteLine("la mia lista è composta da: " + cibiPreferiti.Length + " piatti");
-
-//La vostra classifica (dunque stampare l’intero array in ordine indicando la posizione in classifica)
-
-Console.WriteLine("classifica cibi: ");
-
-for (int i = 0; i < cibiPreferiti.Length; i++) 
+// INT ARRAY --- corpo
+void StampaArray(int[] array)
 {
-    Console.WriteLine(cibiPreferiti[i]);
-}
-
-//CIBO PREFERITO TOP E CIBO PREFERITO ULTIMO E CON CIBI PREFERITI A META' CLASSIFICA (MEDIANI)
-
-Console.WriteLine("-----CLASSIFICA CIBI PREFERITI CON CIBI PREFERITI-----");
-
-Console.WriteLine("Primo in classifica: " + cibiPreferiti[0]);
-Console.WriteLine("Ultimo in classifica: " + cibiPreferiti[cibiPreferiti.Length-1]);
-
-
-
-/*for (int i = 0; i < cibiPreferiti.Length; i++)
-{
-    if (cibiPreferiti[i] == cibiPreferiti[4])
+    Console.Write("[");
+    for (int i = 0; i < array.Length; i++)
     {
-        Console.WriteLine(cibiPreferiti[4]);
+        if (i == array.Length - 1)
+        {
+            Console.Write(array[i]);
+        }
+        else
+        {
+            Console.Write(array[i] + ", ");
+        }
 
     }
+    Console.Write("]");
 
-}*/
-
-int posizioneMedio = cibiPreferiti.Length / 2;
-
-if (cibiPreferiti.Length % 2 == 0)
-{
-    Console.WriteLine("cibo posizione media è: " + cibiPreferiti[posizioneMedio] + 
-        cibiPreferiti[posizioneMedio - 1]);
-} 
-else
-{
-    Console.WriteLine("posizione media è: " + cibiPreferiti[posizioneMedio]);
 }
+
+
+int Quadrato(int numero)
+{
+    int risultato = 0;
+    risultato = numero * numero;
+    return risultato;
+}
+
+
+
+
+
+
+
+int [] ElevaArrayAlQuadrato(int[] array)
+{
+        
+    int[] copiaArray = (int[])array.Clone();
+    
+    for (int i = 0; i < copiaArray.Length; i++)
+    {
+        copiaArray[i] = Quadrato(array[i]);
+    } 
+    
+    return copiaArray;
+
+
+}
+
+int SommaElementiArray(int[] array)
+{
+    int[] copiaArray = (int[])array.Clone();
+    int somma = 0;
+
+for (int i = 0; i < array.Length; i++)
+    {
+        somma += copiaArray[i];
+    }
+    return somma;
+}
+
+
+
+
+
+
+
+    //--------- INIZIO ESERCIZIO --- main
+
+
+
+int[] arrayDiNumeri = { 1, 6, 9, 10 };
+StampaArray(arrayDiNumeri);
+int[] copiaArray = ElevaArrayAlQuadrato(arrayDiNumeri);
+StampaArray(copiaArray);
+
+
+int sum = 
+
+
+
+
+
+
+
+
 
 
 
