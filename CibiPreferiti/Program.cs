@@ -1,4 +1,26 @@
-﻿
+﻿//--------- INIZIO ESERCIZIO --- main
+
+
+
+int[] arrayDiNumeri = { 1, 6, 9, 10 };
+StampaArray(arrayDiNumeri);
+int[] copiaArray = ElevaArrayAlQuadrato(arrayDiNumeri);
+StampaArray(copiaArray);
+
+
+int sum = SommaElementiArray(arrayDiNumeri);
+Console.WriteLine("La somma di tutti i numeri è: " + sum);
+
+int sumAlQuadrato = SommaElementiArray(ElevaArrayAlQuadrato(arrayDiNumeri));
+Console.WriteLine("La somma di tutti elevati al quadrato è: " + sumAlQuadrato);
+
+
+
+
+
+
+
+
 
 
 // INT ARRAY --- corpo
@@ -68,17 +90,6 @@ for (int i = 0; i < array.Length; i++)
 
 
 
-    //--------- INIZIO ESERCIZIO --- main
-
-
-
-int[] arrayDiNumeri = { 1, 6, 9, 10 };
-StampaArray(arrayDiNumeri);
-int[] copiaArray = ElevaArrayAlQuadrato(arrayDiNumeri);
-StampaArray(copiaArray);
-
-
-int sum = 
 
 
 
